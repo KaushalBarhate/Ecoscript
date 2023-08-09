@@ -1,0 +1,13 @@
+# This is a comment
+
+x := 10; # Assign a number to a variable
+y := 20;
+z := x + y; # Perform arithmetic
+
+PRINT(z); # Call a function
+
+
+
+
+
+
