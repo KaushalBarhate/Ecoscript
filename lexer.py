@@ -1,7 +1,7 @@
 from sly import Lexer
 
 class EcoScriptLexer(Lexer):
-    tokens = { NAME, NUMBER, ASSIGN, PLUS, MINUS, TIMES, DIVIDE,IF, ELSE, FOR, WHILE, LBRACKET, RBRACKET,  LT, GT}
+    tokens = { NAME, NUMBER, ASSIGN, PLUS, MINUS, TIMES, DIVIDE,IF, ELSE, FOR, WHILE, LBRACKET, RBRACKET,  LT, GT,PRINT_SAVE}
     ignore = ' \t'
     literals = { ';', '(', ')' , '{', '}', ','}
 
@@ -17,6 +17,7 @@ class EcoScriptLexer(Lexer):
     NAME['else'] = ELSE
     NAME['for'] = FOR
     NAME['while'] = WHILE
+    NAME['print'] = PRINT_SAVE
     LBRACKET = r'\['
     RBRACKET = r'\]'
     LT = r'<'

@@ -10,6 +10,10 @@ class EcoScriptInterpreter:
         self.parser.parse(self.lexer.tokenize(text))
         print("Energy Consumed:", self.parser.energy)
         print("Carbon Footprint:", self.parser.carbon_footprint)
+        output = self.parser.output
+        output += "Energy Consumed: " + str(self.parser.energy) + "\n"
+        output += "Carbon Footprint: " + str(self.parser.carbon_footprint)
+        return output
 
 if __name__ == '__main__':
     interpreter = EcoScriptInterpreter()

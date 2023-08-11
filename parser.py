@@ -8,8 +8,7 @@ class EcoScriptParser(Parser):
         self.names = { }
         self.energy = 0
         self.carbon_footprint = 0
-
-
+        self.output = "" # Store the print statements
 
 
     @_('statements statement')
@@ -30,6 +29,7 @@ class EcoScriptParser(Parser):
     def statement(self, p):
         if p.NAME == 'PRINT':
             print(p.expr)
+            self.output += str(p.expr) + "\n"
             self.energy += 1
             self.carbon_footprint += 0.05
         else:
